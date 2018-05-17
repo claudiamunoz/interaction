@@ -1,0 +1,52 @@
+.Appear! {
+    visibility: visible;
+}
+@keyframes flash{
+    0%   {background-color:lightpink; left:0px; top:0px;}
+    25%  {visibility: hidden; left:200px; top:0px;}
+    50%  {background-color:paleturquoise; left:200px; top:200px; transform: rotate(0.63turn);}
+    75%  {visibility: hidden; left:0px; top:200px;}
+    100% {background-color:blueviolet; left:0px; top:0px;}
+}
+.mixed {
+    animation-name: flash;
+     animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+.mixed:active {
+    animation-play-state: paused;
+}
+@keyframes rotation {
+    0%   {left:0px; top:200px;}
+    25%  {left:600px; top:200px;}
+    50%  {left:0px; top:200px;transform: rotate(0.63turn);}
+    75%  {left:600px; top:200px;}
+    100% {left:0px; top:200px; box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);}
+}
+#cssboxes {
+    width: 0;
+	height: 0;
+	border-top: 100px solid gold;
+	border-right: 100px solid pink;
+    position: fixed;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: 9;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+#cssboxes:hover {
+    border-top: 100px solid black;
+	border-right: 100px solid orange;
+    opacity: 0.67;
+    animation-delay: -2s;
+}
+#jsanimation {
+     width: 0;
+	height: 0;
+	border-top: 100px solid purple;
+	border-right: 100px solid aliceblue;
+    position: fixed;
+    opacity: 0.33;
+    border: dashed red;
+}
