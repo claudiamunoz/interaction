@@ -1,5 +1,4 @@
 var vibratingbox = document.getElementById("jsanimation");
-var rotatingbox = document.getElementById("cssboxes");
 var xpos1 = 200;
 var ypos1 = 400;
 var xstep1 = 46;
@@ -30,8 +29,4 @@ function secretmessage(event) {
     } else if (event.key === "d") {
         vibratingbox.textContent = "I will never stop!";
     }
-}
-
-function onMouseDrag(event) {
-	var path = new Path();
 }
