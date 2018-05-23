@@ -1,4 +1,5 @@
 var vibratingbox = document.getElementById("jsanimation");
+var rotatingbox = document.getElementById("cssboxes");
 var xpos1 = 200;
 var ypos1 = 400;
 var xstep1 = 46;
@@ -19,14 +20,18 @@ function move() {
     vibratingbox.style.left = xpos1 + 'px';
 }
 
-window.addEventListener("keypress", change);
+window.addEventListener("keypress", secretmessage);
 
-function change(event) {
+function secretmessage(event) {
     if (event.key === "a"){
-        vibratingbox.message = "Boo"
+        vibratingbox.textContent = "Boo";
     } else if (event.key === "s") {
-        vibratingbox.style.background = "orange";
-    } else {
-        vibratingbox.style.background = "green";
+        vibratingbox.textContent = "Leave me alone human!";
+    } else if (event.key === "d") {
+        vibratingbox.textContent = "I will never stop!";
     }
+}
+
+function onMouseDrag(event) {
+	var path = new Path();
 }
